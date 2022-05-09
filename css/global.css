@@ -139,6 +139,10 @@ header{
     margin-bottom: 0.5em;
 }
 
+.page-title ~ section h3 {
+    font-size: min(5vw, 1.7rem);
+}
+
 .page-title ~ section p {
     font-size: min(3.75vw, 1.25rem);
 }
@@ -168,11 +172,13 @@ footer h3{
 .social-links {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .social svg{
     width: 1.5em;
     margin-top: 0.5em;
+    margin-inline: 0.5em;
 }
 
 .footer-logo img {
