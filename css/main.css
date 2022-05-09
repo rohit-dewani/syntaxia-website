@@ -103,7 +103,7 @@
 }
 
 .schedule-imgs {
-    width: min(95vw,35rem);
+    width: min(70vw,35rem);
     display: flex;
     flex-direction: column;
 }
