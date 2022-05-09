@@ -89,7 +89,7 @@ header{
     display: none;
 }
 
-.nav-list .register-btn {
+.register-btn {
     color: var(--clr-primary-purple);
     background-color: var(--clr-primary-yellow);
     padding: 0.4em 0.6em;
@@ -140,11 +140,11 @@ header{
 }
 
 .page-title ~ section h3 {
-    font-size: min(5vw, 1.7rem);
+    font-size: min(5vw, 1.75rem);
 }
 
-.page-title ~ section p {
-    font-size: min(3.75vw, 1.25rem);
+.page-title ~ section p,li {
+    font-size: min(3.25vw, 1.5rem);
 }
 
 /* Footer */
@@ -158,6 +158,10 @@ footer {
     align-items: flex-start;
     padding-top: 5vh;
     padding-left: 5vw;
+}
+
+footer ul {
+    padding-left: 0;
 }
 
 footer h3{
@@ -224,7 +228,7 @@ footer h3{
 }
 
 /*Media Queries*/
-@media (max-width: 50em) {
+@media (max-width: 50rem) {
 
     .nav-list {
         flex-direction: row-reverse;
