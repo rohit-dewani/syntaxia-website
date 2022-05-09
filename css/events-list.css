@@ -1,0 +1,65 @@
+.bg-yellow {
+    background-color: #FDB927;
+}
+
+.page-content section {
+    margin-bottom: 0;
+}
+
+.event-icon,
+.about-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75em;
+}
+
+.about-event{
+    align-items: flex-start;
+}
+
+.event-icon img {
+    width: min(15rem, 30vw);
+}
+
+.view-event-btn {
+    background-color: #552583;
+    border-radius: 0.5em;
+    padding: 0.75em 1.5em;
+    align-self: center;
+}
+
+.view-event-btn:hover,
+.view-event-btn:focus {
+    background-color: #000;
+    outline: none;
+}
+
+/*Media Queries*/
+@media (min-width: 50em) {
+    .bg-white,
+    .bg-yellow {
+        display: flex;
+        align-items: center;
+        gap: 15em;
+    }
+
+    .bg-yellow {
+        text-align: right;
+        flex-direction: row-reverse;
+    }
+
+    .view-event-btn {
+        align-self: flex-start;
+    }
+
+    .bg-yellow .view-event-btn,
+    .bg-yellow .event-name {
+        align-self: flex-end;
+    }
+
+    .about-event {
+        gap: 5em;
+        width: 50%;
+    }
+}

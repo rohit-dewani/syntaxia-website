@@ -76,7 +76,7 @@ header{
 }
 
 .header-logo img {
-    width: min(18.75rem,30vw); /* 18.75rem*/
+    width: min(25rem,45vw); /* 18.75rem*/
 }
 
 .nav-list,
