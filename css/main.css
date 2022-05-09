@@ -1,0 +1,133 @@
+.hero {
+    background-color: var(--clr-primary-black);
+    color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 85vh;
+    margin-top: 15vh;
+}
+
+.hero-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+}
+
+.hero-logo-sjc,
+.hero-logo-technophite {
+    width: min(25vw, 15.625rem); /*15.625*/
+}
+
+.hero-text {
+    font-size: min(0.625rem,0.8vw); /*.625r*/
+}
+
+.hero-text h1 {
+    font-size: 4em;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+}
+
+.hero-text h3 {
+    font-size: 2.8em;
+}
+
+.hero-syntaxia {
+    width: min(80vw,70rem);
+}
+
+.video {
+    background-color: var(--clr-primary-yellow);
+    padding-block: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.video-player {
+    width: min(60rem,85vw);
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh 3vw;
+}
+
+.events h2 {
+    font-size: min(4rem, 5vw);
+    margin-bottom: 5vh;
+}
+
+.events-grid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    flex-wrap: wrap;
+}
+
+.events-grid img {
+    width: min(12rem, 20vw); /* 15.625*/
+}
+
+.event-icon {
+    position: relative;
+}
+
+.event-text {
+    position: absolute;
+    transform: translate(-100%, -90%);
+}
+
+.schedule {
+    background-color: var(--clr-primary-purple);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    padding: 4vh 3vw;
+}
+
+.schedule h2 {
+    color: var(--clr-primary-yellow);
+    font-size: min(4rem, 5vw);
+    margin-bottom: 0;
+}
+
+.schedule-imgs {
+    width: min(95vw,35rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-imgs img + img {
+    margin-top: 5em;
+}
+
+/*Media Queries*/
+@media (hover) {
+    .event-icon {
+        position: relative;
+    }
+    
+    .event-text {
+        position: absolute;
+        transform: translate(-100%, 30%);
+        visibility: hidden;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .event-icon:hover .event-text {
+        transform: translate(-100%, -80%);
+        visibility: visible;
+    }
+}

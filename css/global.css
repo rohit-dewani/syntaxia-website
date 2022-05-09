@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary-black: #000000;
+    --clr-primary-purple: #552583;
+    --clr-primary-yellow: #FDB927;
+    --clr-accent: #333333;
+    --clr-white: #ffffff;
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1d23;
+}
+
+.loader > img {
+    width: max(15vw, 12.5rem);
+    height: auto;
+}
+
+.loader.hide-loader {
+    animation: loaderFadeOut 1s forwards;
+}
+
+@keyframes loaderFadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+body, h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+
+svg path{
+    fill: var(--clr-white);
+}
+
+/* Header*/
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    z-index: 2;
+    background-color: var(--clr-accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vw; /* 1em 3em;*/
+    font-size: min(1.25rem, 4vw); /*1.25*/
+}
+
+.header-logo img {
+    width: min(18.75rem,30vw); /* 18.75rem*/
+}
+
+.nav-list,
+.primary-nav {
+    display: flex;
+    gap: 1em;
+}
+
+.nav-toggle-btn {
+    display: none;
+}
+
+.nav-list .register-btn {
+    color: var(--clr-primary-purple);
+    background-color: var(--clr-primary-yellow);
+    padding: 0.4em 0.6em;
+    border-radius: 0.5em;
+}
+
+.nav-list .active {
+    outline: solid 3px var(--clr-primary-yellow);
+    outline-offset: 5px;
+}
+
+.register-btn:hover,
+.register-btn:focus {
+    background-color: var(--clr-white);
+}
+
+/* Footer */
+footer {
+    font-size: min(1.25rem, 4vw);
+    background-color: var(--clr-accent);
+    color: var(--clr-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 5vh;
+    padding-left: 5vw;
+}
+
+footer h3{
+    font-size: min(1.5rem,5vw);
+}
+
+.sitemap-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social svg{
+    width: 1.5em;
+    margin-top: 0.5em;
+}
+
+.footer-logo img {
+    width: 12.5rem;
+}
+
+/* Hover effect on nav list and sitemap links*/
+.primary-nav a,
+.sitemap-links a,
+.social-links a {
+    position: relative;
+}
+
+.primary-nav a:not(.active):focus,
+.sitemap-links a:focus,
+.social-links a:focus {
+    outline: none;
+}
+
+.primary-nav a::after,
+.sitemap-links a::after,
+.social-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr-primary-yellow);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.primary-nav a:hover::after,
+.primary-nav a:focus::after,
+.sitemap-links a:hover::after,
+.sitemap-links a:focus::after,
+.social-links a:hover::after,
+.social-links a:focus::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/*Media Queries*/
+@media (max-width: 50em) {
+
+    .nav-list {
+        flex-direction: row-reverse;
+    }
+
+    .primary-nav{ 
+        z-index: 5;
+        position: fixed;
+        margin: 0;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        gap: 3vh;
+        padding: 15vh 5vw;
+        background-color: hsl(0 0% 20% / 0.8);
+        transform: translateX(100%);
+        transition: transform 0.2s linear;
+    }
+
+    .primary-nav[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .nav-toggle-btn {
+        display: block;
+        /* position: fixed; */
+        z-index: 10;
+        background-color: var(--clr-accent);
+        border: 0;
+        width: 1.6rem;
+        aspect-ratio: 1;
+    }
+
+    .hamburger[data-visible="false"] {
+        display: none;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .close[data-visible="true"]{
+        display: block;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 5vh;
+    }
+    
+}
