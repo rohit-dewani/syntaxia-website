@@ -61,8 +61,8 @@
 }
 
 .events h2 {
-    font-size: min(4rem, 5vw);
-    margin-bottom: 5vh;
+    font-size: min(3.5rem, 7.5vw);
+    margin-bottom: 0.9em;
 }
 
 .events-grid {
@@ -98,7 +98,7 @@
 
 .schedule h2 {
     color: var(--clr-primary-yellow);
-    font-size: min(4rem, 5vw);
+    font-size: min(3.5rem, 7.5vw);
     margin-bottom: 0;
 }
 
