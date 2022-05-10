@@ -106,7 +106,7 @@
 }
 
 .schedule {
-    background-color: var(--clr-primary-yellow);
+    background-color: var(--clr-primary-black);
     color: var(--clr-primary-purple);
     display: flex;
     flex-direction: column;
