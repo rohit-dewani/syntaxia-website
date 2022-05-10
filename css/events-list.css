@@ -1,5 +1,5 @@
 .bg-yellow {
-    background-color: #FDB927;
+    background-color: var(--clr-primary-yellow);
 }
 
 .page-content section {
@@ -23,7 +23,7 @@
 }
 
 .view-event-btn {
-    background-color: #552583;
+    background-color: var(--clr-primary-purple);
     border-radius: 0.5em;
     padding: 1em 1.5em;
     align-self: center;
@@ -31,7 +31,7 @@
 
 .view-event-btn:hover,
 .view-event-btn:focus {
-    background-color: #000;
+    background-color: var(--clr-primary-black);
     outline: none;
 }
 

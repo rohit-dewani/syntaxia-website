@@ -34,7 +34,7 @@
 }
 
 .span-color {
-    color: #552583;
+    color: var(--clr-primary-purple);
     font-weight: bold;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .register a {
-    background-color: #552583;
+    background-color: var(--clr-primary-purple);
     font-size: min(4vw, 1.5rem);
     margin-block: 1em;
     padding: 0.75em 1em;
@@ -53,8 +53,8 @@
 
 .register a:hover,
 .register a:focus {
-    background-color: #FDB927;
-    color: #000;
+    background-color: var(--clr-primary-yellow);
+    color: var(--clr-primary-black);
     outline: none;
 }
 

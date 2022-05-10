@@ -86,8 +86,27 @@
     transform: translate(-100%, -90%);
 }
 
-.schedule {
+.instructions {
     background-color: var(--clr-primary-purple);
+    color: var(--clr-white);
+    padding: 4vh 3vw;
+}
+
+.instructions h2 {
+    font-size: min(3.5rem, 7.5vw);
+}
+
+.instructions ul {
+    padding-left: 1em;
+}
+
+.instructions li {
+    list-style-type: disc;
+}
+
+.schedule {
+    background-color: var(--clr-primary-yellow);
+    color: var(--clr-primary-purple);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +116,6 @@
 }
 
 .schedule h2 {
-    color: var(--clr-primary-yellow);
     font-size: min(3.5rem, 7.5vw);
     margin-bottom: 0;
 }

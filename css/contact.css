@@ -8,7 +8,7 @@
 }
 
 .page-content svg path {
-    fill: black;
+    fill: var(--clr-primary-black);
 }
 
 p {
