@@ -21,6 +21,10 @@
     list-style-type: disc;
 }
 
+.event-rules {
+    margin-bottom: 4em;
+}
+
 .event-details div {
     background-color: rgba(0 0 0 / 0.1);
     margin-bottom: 1em;
@@ -42,7 +46,7 @@
 .register a {
     background-color: #552583;
     font-size: min(4vw, 1.5rem);
-    margin-block: 2em;
+    margin-block: 1em;
     padding: 0.75em 1em;
     border-radius: 0.5em;
 }
@@ -50,6 +54,7 @@
 .register a:hover,
 .register a:focus {
     background-color: #FDB927;
+    color: #000;
     outline: none;
 }
 
@@ -71,6 +76,6 @@
     }
 
     .event-details {
-        min-width: fit-content;
+        min-width: 40%;
     }
 }
