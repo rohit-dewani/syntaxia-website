@@ -23,6 +23,7 @@
 
 .hero-text {
     font-size: min(0.625rem,0.8vw); /*.625r*/
+    text-align: center;
 }
 
 .hero-text h1 {

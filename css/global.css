@@ -17,6 +17,7 @@
     height: 100%;
     z-index: 1000;
     position: fixed;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,8 +80,7 @@ header{
     width: min(25rem,45vw); /* 18.75rem*/
 }
 
-.nav-list,
-.primary-nav {
+.nav-list {
     display: flex;
     gap: 1em;
 }
@@ -92,18 +92,6 @@ header{
 .nav-list .active {
     outline: solid 3px var(--clr-primary-yellow);
     outline-offset: 5px;
-}
-
-.register-btn {
-    color: var(--clr-primary-purple);
-    background-color: var(--clr-primary-yellow);
-    padding: 0.4em 0.6em;
-    border-radius: 0.5em;
-}
-
-.register-btn:hover,
-.register-btn:focus {
-    background-color: var(--clr-white);
 }
 
 /* Page Contents */
@@ -191,19 +179,19 @@ footer h3{
 }
 
 /* Hover effect on nav list and sitemap links*/
-.primary-nav a,
+.nav-list a,
 .sitemap-links a,
 .social-links a {
     position: relative;
 }
 
-.primary-nav a:not(.active):focus,
+.nav-list a:not(.active):focus,
 .sitemap-links a:focus,
 .social-links a:focus {
     outline: none;
 }
 
-.primary-nav a::after,
+.nav-list a::after,
 .sitemap-links a::after,
 .social-links a::after {
     content: '';
@@ -218,8 +206,8 @@ footer h3{
     transition: transform 0.3s ease;
 }
 
-.primary-nav a:hover::after,
-.primary-nav a:focus::after,
+.nav-list a:hover::after,
+.nav-list a:focus::after,
 .sitemap-links a:hover::after,
 .sitemap-links a:focus::after,
 .social-links a:hover::after,
@@ -231,11 +219,7 @@ footer h3{
 /*Media Queries*/
 @media (max-width: 50rem) {
 
-    .nav-list {
-        flex-direction: row-reverse;
-    }
-
-    .primary-nav{ 
+    .nav-list{ 
         z-index: 5;
         position: fixed;
         margin: 0;
@@ -245,16 +229,17 @@ footer h3{
         padding: 15vh 5vw;
         background-color: hsl(0 0% 20% / 0.8);
         transform: translateX(100%);
-        transition: transform 0.2s linear;
+        transition: transform 0.2s linear;;
     }
 
-    .primary-nav[data-visible="true"] {
+    .nav-list[data-visible="true"] {
         transform: translateX(0%);
     }
 
     .nav-toggle-btn {
+        position: absolute;
+        right: 5%;
         display: block;
-        /* position: fixed; */
         z-index: 10;
         background-color: var(--clr-accent);
         border: 0;

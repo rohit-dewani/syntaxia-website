@@ -1,4 +1,4 @@
-const primaryNav = document.querySelector('.primary-nav');
+const primaryNav = document.querySelector('.nav-list');
 const navToggle = document.querySelector('.nav-toggle-btn');
 const svgBars = document.querySelector('.hamburger');
 const svgClose = document.querySelector('.close');
