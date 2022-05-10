@@ -107,7 +107,7 @@
 
 .schedule {
     background-color: var(--clr-primary-black);
-    color: var(--clr-primary-purple);
+    color: var(--clr-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
